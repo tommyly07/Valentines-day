@@ -20,8 +20,12 @@ const nobutton = document.querySelector(".no-button");  //Brücke zwischen HTML 
 const yesbutton = document.querySelector(".yes-button");
 nobutton.textContent = message[messageIndex];
 messageIndex = (messageIndex + 1) % message.length;
-const currentsize = parseFloat(getComputedStyle(yesbutton).fontSize); // Aktuelle Schriftgröße des Ja-Buttons, bsp.: 16px -> 16
-yesbutton.style.fontSize = `${currentsize * 1.5}px`;
+const currentsize = parseFloat(getComputedStyle(yesbutton).fontSize); // Aktuelle Schriftgröße des Ja-Buttons, bsp.: 16px -> 16 damit wir damit rechnen können
+const newsize = currentsize * 1.5;
+
+if(currentsize < 1000){
+    yesbutton.style.fontSize = newsize + "px";
+}
 }
 
 function handleYesclick(){
