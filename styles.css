@@ -31,7 +31,6 @@ h1{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .no-button{
@@ -42,7 +41,6 @@ h1{
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .gif_container{
